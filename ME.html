@@ -13,7 +13,24 @@
   </style>
 </head>
 <body>
-    <h1>LABAN LANG PO LOVEEE ILOVEYOU :> </h1>
-    <img src="">
+      <textarea name="text" id="userInput"></textarea>
+    <button onclick="talk()">Speak</button>
+
+
+
+
+
+    <script>
+        
+function talk(){
+
+    const text = document.getElementById('userInput').value;
+    const txt_speak = new SpeechSynthesisUtterance(text)
+
+  
+
+    window.speechSynthesis.speak(txt_speak);
+}
+    </script>
 </body>
 </html>
